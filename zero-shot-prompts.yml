@@ -28,7 +28,61 @@ Senior Business Analyst
 
 
 - prompt: "Create a concise meeting summary with the following structure: Key Decisions, Action Items (with owners and deadlines), and Next Meeting Date. Write it for a project status meeting about implementing WhatsApp customer service capabilities."
-  ai_response: "[Test this prompt and paste the response here]"
+  ai_response: "[Meeting Summary: WhatsApp Customer Service Implementation – Project Status
+
+Key Decisions
+
+Proceed with Phase 2 of the integration, focusing on automated response flows.
+Prioritize compliance review before enabling customer data exchange via WhatsApp.
+Align go-live date with the broader digital support rollout in Q4.
+Action Items
+
+Roy Makamu – Finalize API integration specs with the vendor by 22 July 2025.
+Jann Taylor – Coordinate with Legal for compliance sign-off by 24 July 2025.
+Kirsten Greyling – Draft internal training materials for support agents by 29 July 2025.
+Denasharee Naidoo – Update the requirements package and circulate for review by 18 July 2025.
+Next Meeting Date
+
+Tuesday, 29 July 2025 at 10:00 AM CET]"
+- prompt: "Write a professional email to a stakeholder explaining that you need more information for the new WhatsApp project to do a thorough requirement analysis."
+  ai_response: |
+    Subject: Request for Additional Information – WhatsApp Project Requirement Analysis
+
+    Dear [Stakeholder Name],
+
+    I hope this message finds you well. As we begin the requirement analysis for the new WhatsApp project, I would like to ensure that we have a comprehensive understanding of your expectations and objectives.
+
+    To proceed effectively, could you please provide further details regarding the project’s scope, key features, target audience, and any specific business goals? This information will help us perform a thorough analysis and deliver a solution that aligns with your needs.
+
+    Thank you for your cooperation. I look forward to your response.
+
+    Best regards,
+    [Your Name]
 
 - prompt: "Write a brief technical requirements document for integrating WhatsApp Business API into an existing customer service system. Include sections for: Overview, Technical Requirements, Integration Points, and Success Criteria. Use bullet points and keep it under 300 words."
-  ai_response: "[Test this prompt and paste the response here]"
+  ai_response: "[Tes1. Overview
+
+Objective: Enable customer service agents to communicate with customers via WhatsApp within the existing support platform.
+Scope: Inbound and outbound messaging, automated responses, and message history tracking.
+2. Technical Requirements
+
+Access to WhatsApp Business API via Meta-approved provider.
+Secure HTTPS endpoints for webhook callbacks.
+OAuth 2.0 or API key-based authentication for API access.
+JSON-based message formatting and parsing.
+Data encryption in transit and at rest.
+Compliance with GDPR and local data protection regulations.
+3. Integration Points
+
+CRM System: Sync customer profiles and conversation history.
+Ticketing System: Link WhatsApp messages to support tickets.
+Notification Engine: Trigger automated responses and alerts.
+Analytics Dashboard: Track message volume, response time, and resolution metrics.
+4. Success Criteria
+
+100% message delivery and receipt confirmation within SLA.
+Seamless agent handoff between WhatsApp and other channels.
+Real-time syncing of customer data and ticket updates.
+Positive feedback from pilot users and support agents.
+No critical errors or data loss during the first 30 days post-launch.
+
