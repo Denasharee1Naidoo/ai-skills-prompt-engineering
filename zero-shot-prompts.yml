@@ -1,0 +1,34 @@
+# Zero-Shot Prompt Practice
+
+- prompt: "Write a professional email to stakeholders explaining a 2-week delay in the WhatsApp integration project. Include an apology, brief explanation of technical challenges, revised timeline, and next steps. Keep the tone professional but reassuring."
+  ai_response: "[]]"Subject: Update on WhatsApp Integration Project Timeline
+
+Dear Stakeholders,
+
+I hope this message finds you well.
+
+I’m writing to inform you that the WhatsApp integration project will experience a delay of approximately two weeks. We sincerely apologize for this shift in timeline and understand the importance of timely delivery for all involved.
+
+The delay is primarily due to unforeseen technical challenges encountered during the integration of third-party APIs. Our development team identified compatibility issues that require additional testing and refinement to ensure a stable and secure implementation. Addressing these now will help us avoid larger disruptions later in the project lifecycle.
+
+Revised Timeline:
+
+Original Go-Live: [Insert Original Date]
+New Target Go-Live: [Insert New Date, +2 weeks]
+Next Steps:
+
+The technical team is actively resolving the integration issues and will complete regression testing by [Insert Date].
+We will provide a detailed progress update in our next stakeholder sync.
+A revised project plan will be shared by [Insert Date].
+We remain committed to delivering a high-quality solution and appreciate your continued support and understanding. Please feel free to reach out if you have any questions or would like to discuss the revised timeline in more detail.
+
+Warm regards,
+Denasharee Naidoo
+Senior Business Analyst
+
+
+- prompt: "Create a concise meeting summary with the following structure: Key Decisions, Action Items (with owners and deadlines), and Next Meeting Date. Write it for a project status meeting about implementing WhatsApp customer service capabilities."
+  ai_response: "[Test this prompt and paste the response here]"
+
+- prompt: "Write a brief technical requirements document for integrating WhatsApp Business API into an existing customer service system. Include sections for: Overview, Technical Requirements, Integration Points, and Success Criteria. Use bullet points and keep it under 300 words."
+  ai_response: "[Test this prompt and paste the response here]"
