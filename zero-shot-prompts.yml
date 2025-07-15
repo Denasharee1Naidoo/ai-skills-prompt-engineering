@@ -86,3 +86,138 @@ Real-time syncing of customer data and ticket updates.
 Positive feedback from pilot users and support agents.
 No critical errors or data loss during the first 30 days post-launch.
 
+# One-Shot Prompt Practice
+# Code Review Comment
+prompt: |
+  Write a constructive code review comment for a pull request. Here's an example:
+  
+  Example: "Great work on implementing the user authentication! I noticed the password validation could be strengthened by adding a check for special characters. Consider using a regex pattern like /^(?=.*[!@#$%^&*])/ to ensure at least one special character. This would align with our security standards. Otherwise, the logic flow looks solid!"
+  
+  Now write a similar code review comment for a WhatsApp integration module that has good error handling but lacks proper logging.
+ai_response: "[Test this prompt and paste the response here]"
+
+# User Story Writing
+prompt: |
+  Write a user story following this format:
+  
+  Example: "As a customer service manager, I want to view real-time chat metrics on a dashboard so that I can monitor team performance and identify bottlenecks during peak hours. Acceptance criteria: Dashboard updates every 30 seconds, shows active chats, average response time, and agent availability."
+  
+  Now write a user story for a customer who wants to receive automated WhatsApp notifications about their order status.
+ai_response: "[Test this prompt and paste the response here]"
+
+# Bug Report
+prompt: |
+  Write a detailed bug report using this structure:
+  
+  Example: "**Title:** Login form validation fails with special characters
+  **Environment:** Chrome 120, Windows 11, Production
+  **Steps to Reproduce:** 1) Navigate to login page 2) Enter email with + symbol 3) Click submit
+  **Expected Result:** User should be logged in successfully
+  **Actual Result:** Error message 'Invalid email format' appears
+  **Priority:** Medium - affects users with email aliases"
+  
+  Now write a bug report for WhatsApp messages not being delivered during peak hours.
+ai_response: "[Test this prompt and paste the response here]"
+
+# Status Update Email
+prompt: |
+  Write a project status update email following this example:
+  
+  Example: "Subject: Weekly Update - Mobile App Redesign Project
+  
+  Hi Team,
+  
+  Here's our progress update for Week 12:
+  
+  ✅ **Completed:** User interface mockups for login and dashboard screens
+  ✅ **In Progress:** Backend API integration (60% complete)
+  ⚠️ **Blocked:** Waiting for design approval on payment flow
+  📅 **Next Week:** Complete API integration, begin user testing preparation
+  
+  Risk: Design approval delay may push testing back 3 days. Mitigation: Parallel work on other screens.
+  
+  Questions or concerns? Let's discuss in our Friday standup.
+  
+  Best regards,
+  Sarah"
+  
+  Now write a status update email for the WhatsApp integration project covering week 8 of development.
+ai_response: "[Test this prompt and paste the response here]"
+ Code Review Comment
+Great job implementing robust error handling in the WhatsApp integration module! One suggestion to enhance maintainability and debugging would be to add structured logging throughout the key interaction points—especially around message delivery and API response handling. This will help us trace issues more effectively in production and improve observability. Consider using a consistent logging format with context like user ID, timestamp, and message type.
+
+✅ User Story
+As an online shopper, I want to receive automated WhatsApp notifications about my order status so that I can stay informed without checking my email.
+Acceptance criteria:
+
+Notifications are sent for order confirmation, shipping, and delivery
+Messages include order number and tracking link
+Opt-in is required during checkout
+✅ Bug Report
+Title: WhatsApp messages not delivered during peak hours
+Environment: WhatsApp Business API v2.45, Node.js backend, Production
+Steps to Reproduce:
+
+Send customer support messages via WhatsApp between 6–8 PM CET
+Monitor delivery status in logs
+Compare with off-peak delivery behavior
+Expected Result: Messages should be delivered within 5 seconds regardless of time
+Actual Result: Messages remain in “pending” state or fail with timeout errors
+Priority: High – affects customer communication during peak usage
+✅ Status Update Email
+Subject: Week 8 Update – WhatsApp Integration Project
+
+Hi Team,
+
+Here’s the progress update for Week 8:
+
+✅ Completed: Initial API authentication and sandbox testing
+✅ In Progress: Message template approval and webhook configuration (80% complete)
+⚠️ Blocked: Awaiting Meta’s approval for production access
+📅 Next Week: Finalize production setup, begin internal pilot testing
+
+Risk: Delay in Meta approval may impact pilot start date.
+Mitigation: Preparing fallback plan using test environment for training.
+
+Let me know if you have any questions before our Thursday sync.
+
+Best regards,
+Denasharee
+# One-Shot vs Zero-Shot Comparison
+
+# Observations
+response_quality_differences: "[Add your observations about response quality differences]"
+pattern_influence: "[Note any patterns in how examples influenced outputs]"
+task_benefits: "[Record which types of tasks benefited most from examples]"
+
+best_practices:
+effective_examples: "[Your insights about crafting effective examples]"
+choosing_examples: "[Tips for choosing representative examples]"
+when_to_use: "[When one-shot works better than zero-shot]"
+🔍 Response Quality Differences
+One-shot prompts consistently produced more structured, relevant, and context-aware responses. The examples helped set expectations for tone, format, and level of detail. In contrast, zero-shot responses (not shown here but inferred from experience) tend to be more variable—sometimes too generic or missing key structural elements.
+
+🧠 Pattern Influence
+The examples clearly influenced the outputs by:
+
+Establishing a consistent tone (e.g., professional yet friendly in the code review and status email).
+Providing a structural template (e.g., bullet points in the bug report and user story).
+Encouraging domain-specific vocabulary (e.g., “OAuth 2.0,” “webhook,” “compliance sign-off”).
+✅ Task Benefits
+Tasks that benefited most from examples:
+
+Structured writing tasks: Bug reports, user stories, and status updates showed the most improvement with examples.
+Tone-sensitive tasks: Code reviews and stakeholder emails were more effective when tone was modeled.
+💡 Best Practices
+Effective Examples
+Use realistic, domain-relevant content.
+Keep examples concise but complete—showing structure, tone, and intent.
+Highlight key elements (e.g., action items, acceptance criteria, risks).
+Choosing Examples
+Match the example to the task type (e.g., don’t use a casual blog post to model a formal report).
+Choose examples that reflect the expected complexity and audience.
+Use examples that demonstrate both content and formatting.
+When to Use One-Shot
+When the task requires a specific tone, structure, or format.
+When the task is open-ended or creative (e.g., writing, summarizing, reviewing).
+When consistency and clarity are critical (e.g., documentation, stakeholder communication).
