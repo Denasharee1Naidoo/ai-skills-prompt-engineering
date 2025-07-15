@@ -221,3 +221,147 @@ When to Use One-Shot
 When the task requires a specific tone, structure, or format.
 When the task is open-ended or creative (e.g., writing, summarizing, reviewing).
 When consistency and clarity are critical (e.g., documentation, stakeholder communication).
+# Few-Shot Prompt Practice
+# API Documentation
+prompt: |
+  Write API endpoint documentation following these examples:
+  
+  Example 1:
+  POST /api/users
+  Purpose: Create a new user account
+  Parameters: email (string, required), password (string, required), name (string, optional)
+  Response: 201 Created with user object, 400 Bad Request if validation fails
+  
+  Example 2:
+  GET /api/orders/{id}
+  Purpose: Retrieve order details by ID
+  Parameters: id (integer, required, path parameter)
+  Response: 200 OK with order object, 404 Not Found if order doesn't exist
+  
+  Example 3:
+  DELETE /api/sessions/{token}
+  Purpose: Logout user and invalidate session
+  Parameters: token (string, required, path parameter)
+  Response: 204 No Content on success, 401 Unauthorized if token invalid
+  
+  Now write documentation for a WhatsApp webhook endpoint that receives message status updates.
+ai_response: "[Test this prompt and paste the response here]"
+
+# Test Case Writing:
+prompt: |
+  Write test cases following these examples:
+  
+  Example 1:
+  Test ID: TC001
+  Feature: User Registration
+  Scenario: Valid email registration
+  Given: User is on registration page
+  When: User enters valid email "test@example.com" and password "SecurePass123!"
+  Then: Account is created and confirmation email is sent
+  
+  Example 2:
+  Test ID: TC002
+  Feature: Password Reset
+  Scenario: Reset with invalid email
+  Given: User is on password reset page
+  When: User enters non-existent email "fake@nowhere.com"
+  Then: Generic message "If email exists, reset link sent" is displayed
+  
+  Example 3:
+  Test ID: TC003
+  Feature: File Upload
+  Scenario: Upload oversized file
+  Given: User has file larger than 10MB
+  When: User attempts to upload the file
+  Then: Error message "File size exceeds 10MB limit" is shown
+  
+  Now write test cases for WhatsApp message delivery failure scenarios.
+ai_response: "[Test this prompt and paste the response here]"
+
+# Product Requirements
+prompt: |
+  Write a product requirement section following these examples:
+  
+  Example 1:
+  REQ-001: User Authentication
+  Priority: High
+  Description: Users must authenticate using email and password
+  Acceptance Criteria:
+  - Login form validates email format
+  - Password must be 8+ characters with special character
+  - Failed login attempts locked after 5 tries
+  - Session expires after 2 hours of inactivity
+  Dependencies: None
+  
+  Example 2:
+  REQ-002: Order Tracking
+  Priority: Medium  
+  Description: Customers can track order status in real-time
+  Acceptance Criteria:
+  - Order status updates automatically
+  - Tracking page shows current location
+  - Email notifications sent on status changes
+  - Estimated delivery time displayed
+  Dependencies: REQ-001, Payment Gateway Integration
+  
+  Example 3:
+  REQ-003: Mobile Responsiveness
+  Priority: Medium
+  Description: Application adapts to mobile screen sizes
+  Acceptance Criteria:
+  - Works on devices 320px width and above
+  - Touch-friendly button sizes (44px minimum)
+  - Readable text without horizontal scrolling
+  - Fast loading on 3G connections
+  Dependencies: REQ-001, REQ-002
+  
+  Now write a requirement for WhatsApp message template management functionality.
+ai_response: "[T✅ API Documentation
+POST /api/webhooks/whatsapp/status
+
+Purpose: Receive message status updates from WhatsApp Business API
+Parameters:
+message_id (string, required): Unique ID of the WhatsApp message
+status (string, required): Message status (e.g., sent, delivered, read, failed)
+timestamp (string, required): ISO 8601 timestamp of the status update
+recipient_id (string, required): WhatsApp ID of the message recipient
+error_code (integer, optional): Error code if status is "failed"
+error_message (string, optional): Description of the failure
+Response:
+200 OK on successful receipt
+400 Bad Request if required fields are missing or malformed
+401 Unauthorized if authentication fails
+✅ Test Case Writing
+Test ID: TC004
+Feature: WhatsApp Message Delivery
+Scenario: Message fails due to recipient being offline
+Given: User sends a message to a recipient who is offline
+When: WhatsApp attempts delivery
+Then: Status update shows "pending" or "undelivered" within 30 seconds
+
+Test ID: TC005
+Feature: WhatsApp Message Delivery
+Scenario: Message fails due to invalid recipient number
+Given: User sends a message to an invalid WhatsApp number
+When: Message is processed by the API
+Then: Status update shows "failed" with error code 131047
+
+Test ID: TC006
+Feature: WhatsApp Message Delivery
+Scenario: Message fails during peak traffic
+Given: System sends bulk messages during peak hours
+When: API throttles or times out
+Then: Status update shows "failed" with appropriate error code and retry logic is triggered
+
+✅ Product Requirements
+REQ-004: WhatsApp Message Template Management
+
+Priority: High
+Description: Admin users must be able to create, edit, and manage WhatsApp message templates for customer communication.
+Acceptance Criteria:
+Templates can be created with placeholders (e.g., {{customer_name}}, {{order_id}})
+Templates must be submitted for Meta approval before use
+Only approved templates are available for sending
+Templates are categorized by use case (e.g., order updates, reminders)
+Audit log tracks changes to templates
+Dependencies: WhatsApp Business API access, Admin Portal Authentication]"
